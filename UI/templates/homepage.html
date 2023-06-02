@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto'  type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body >
+<div id="wrapper">
+<div class ="back">
+  <div class ="container">
+    <div class ="side1">
+      <div class ="title">Stay Updated!
+      </div>
+      <div class ="content1">Join 60000+ product Managers Receiving Monthly<br> Updates on:
+      </div>
+        <div class ="list"> 
+          <ul>
+          <li>Product Discovery and building what matters</li>
+          <li>Measuring to ensure products are success</li>
+          <li>And Much More</li>
+          </ul>           
+        </div>
+      <div class="email_section">
+        <div class="email_part">
+        <div class="email_address">Email Address:</div>
+        <div id="error">Valid Email Required</div>
+        </div>
+        <input type ="text" id="email" class="input_val" placeholder ="ash@loremcompany.com" autocomplete="off"> 
+      </div>
+      <div class="suscribe_section">
+        <button type="submit" onclick  ="validate()">Subscribe to my newsletter</button>
+      </div>
+    </div>
+    <div class="side2">
+        <!-- <img src="/UI/static/Image/illustration-sign-up-desktop.svg"> -->
+        <img src= "{{url_for('static', filename='/Image/illustration-sign-up-desktop.svg')}}" >
+    </div>
+  </div>
+<div id="overlay"></div>
+<div id="popup">
+<div class="tick"><img src= "{{url_for('static', filename='/Image/icon-success.svg')}}" ></div>
+<div class="header1">Thanks for Subscribing!</div>
+<div class="para1">A confirmation email has been sent to <span id="gmail_output"></span>Please click it and click the button inside to confirm your suscribtion.</div>
+<div class="return"><button id="return_button" onclick="exit()">Dismiss Message</div>
+</div>
+</div>
+</div>
+</body>
+<script src="./js/subscribe.js"></script>
+</html>
